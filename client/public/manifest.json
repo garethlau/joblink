@@ -1,0 +1,19 @@
+{
+  "name": "Tracker",
+  "version": "1.4",
+  "description": "Track your job applications!",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsjIYaJYK25GxQIMhMlzfYuAXonQekUjniyYn9D5xc3LYf1fuTrob9xcYHGcy43XEeTLju2NlnHjccF6flBFyqwaB2ETl0pxDzPBklzh3GhYC3Shk8aBkcR30bT3UJZYkFHG2es7cm8c0u3uXpGNm9xhk5hXk5KOg+kLFvZiOfS7ahrRI7W98N2QKOyk2RPzZ9ZHW38nRugyfKLN2151D/OPgZ7QGKkZl9k8NrFMniBhEe3++WYKc9pYhBUXK/zm1JnBl4Wgm9z0RvB/Et1kzHnkmUvlzJkTn+G1yTrzafoVBfJYKYJtZUznR6PEv1PZKcHtDsTIR/2rV7noHQDAI8QIDAQAB",
+  "permissions": ["activeTab", "identity"],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "oauth2": {
+    "client_id": "349969465296-khomvn62i9j98gingeg1u2s1pc61mj3u.apps.googleusercontent.com",
+    "scopes": ["profile"]
+  },
+  "manifest_version": 2,
+
+ "content_security_policy": "script-src 'self' 'sha256-GgXBdxv+0MKxnJqH3qKVvlbJpExvgfVdmlWEgKhmQ/8='; object-src 'self'"
+}
+
