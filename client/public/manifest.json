@@ -1,6 +1,6 @@
 {
-  "name": "Tracker",
-  "version": "1.4",
+  "name": "Joblink",
+  "version": "0.1.0",
   "description": "Track your job applications!",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsjIYaJYK25GxQIMhMlzfYuAXonQekUjniyYn9D5xc3LYf1fuTrob9xcYHGcy43XEeTLju2NlnHjccF6flBFyqwaB2ETl0pxDzPBklzh3GhYC3Shk8aBkcR30bT3UJZYkFHG2es7cm8c0u3uXpGNm9xhk5hXk5KOg+kLFvZiOfS7ahrRI7W98N2QKOyk2RPzZ9ZHW38nRugyfKLN2151D/OPgZ7QGKkZl9k8NrFMniBhEe3++WYKc9pYhBUXK/zm1JnBl4Wgm9z0RvB/Et1kzHnkmUvlzJkTn+G1yTrzafoVBfJYKYJtZUznR6PEv1PZKcHtDsTIR/2rV7noHQDAI8QIDAQAB",
   "permissions": ["activeTab", "identity"],

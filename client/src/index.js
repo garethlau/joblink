@@ -6,9 +6,16 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+import Router from "route-lite";
+import { StateProvider } from "./store";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StateProvider>
+      <Router>
+        <App />
+      </Router>
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

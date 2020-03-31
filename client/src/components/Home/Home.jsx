@@ -1,11 +1,12 @@
 import React from "react";
+import Nav from "../Nav";
 import css from "./Home.module.scss";
 
 export default function Home() {
-
   return (
-    <div className={css.container}>
-        Track
+    <div>
+      <Nav />
+      Home
     </div>
   );
 }
