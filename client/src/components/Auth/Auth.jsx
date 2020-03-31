@@ -5,22 +5,24 @@ import Signup from "../Signup";
 import Home from "../Home";
 import css from "./Auth.module.scss";
 
-export default function Auth() {
+export default function Auth({
+  username,
+  password,
+  login
+}) {
   return (
     <div className={css.main}>
       <div className={css.input}>
-        <Input placeholder="Username" />
+        <Input placeholder="Username" value={username.value} onChange={username.onChange}  />
       </div>
 
       <div className={css.input}>
-        <Input placeholder="Password" />
+        <Input placeholder="Password" value={password.value} onChange={password.onChange}/>
       </div>
       <div className={css.btn}>
-        <Link component={Home}>
-          <Button fluid primary>
+          <Button fluid primary onClick={login}>
             Log In
           </Button>
-        </Link>
       </div>
       <Divider horizontal>OR</Divider>
       <div className={css.btn}>
