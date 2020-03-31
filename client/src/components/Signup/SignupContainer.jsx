@@ -4,6 +4,9 @@ import useFormInput from "../../hooks/useFormInput";
 import axios from "axios";
 import { baseUrl } from "../../constants";
 import { store, actions } from "../../store";
+import { goTo } from "route-lite";
+
+import Home from "../Home";
 
 export default function SignupContainer() {
   const globalState = useContext(store);
@@ -26,6 +29,7 @@ export default function SignupContainer() {
       .then(response => {
         if (response.data.user) {
           dispatch({ type: actions.SET_USER, payload: response.data.user });
+          goTo(Home);
         }
       })
       .catch(err => {
