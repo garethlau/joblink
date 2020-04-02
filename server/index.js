@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const session = require("express-session");
-const cors = require('cors');
+const cors = require("cors");
 
 const PORT = process.env.PORT || 5003;
 const environment = process.env.NODE_ENV || "dev";
@@ -11,6 +11,7 @@ const keys = require("./config/keys");
 const app = express();
 
 require("./models/User");
+require("./models/Job");
 require("./services/passport");
 
 app.use(
@@ -31,10 +32,20 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(cors())
-app.options('*', cors()) // include before other routes
+app.use(
+  cors({
+    methods: ["GET", "POST"],
+    credentials: true
+  })
+);
 
-
+app.options(
+  "*",
+  cors({
+    methods: ["GET", "POST"],
+    credentials: true
+  })
+); // include before other routes
 mongoose
   .connect(keys.mongoURI, {
     useNewUrlParser: true,
