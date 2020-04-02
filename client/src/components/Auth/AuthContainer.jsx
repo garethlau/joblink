@@ -19,10 +19,18 @@ export default function AuthContainer() {
     if (password.value === "") return;
 
     axios
-      .post(baseUrl + "/api/auth/login", {
-        username: username.value,
-        password: password.value
-      })
+      .post(
+        baseUrl + "/api/auth/login",
+        {
+          username: username.value,
+          password: password.value
+        },
+        {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      )
       .then(response => {
         console.log(response);
         if (response.data.user) {

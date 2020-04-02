@@ -21,11 +21,20 @@ export default function SignupContainer() {
     if (username.value === "") return;
     if (password.value === "") return;
     axios
-      .post(baseUrl + "/api/auth/signup", {
-        email: email.value,
-        username: username.value,
-        password: password.value
-      })
+      .post(
+        baseUrl + "/api/auth/signup",
+        {
+          email: email.value,
+          username: username.value,
+          password: password.value
+        },
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      )
       .then(response => {
         if (response.data.user) {
           dispatch({ type: actions.SET_USER, payload: response.data.user });
