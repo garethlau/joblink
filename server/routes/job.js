@@ -31,6 +31,7 @@ router.post("/", (req, res) => {
 
 router.get("/", requireAuth, (req, res) => {
   let userId = req.user._id;
+  console.log(userId)
   Job.find({ createdBy: userId }, (err, jobs) => {
     if (err) {
       console.log(err);
